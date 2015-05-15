@@ -1,0 +1,7 @@
+	<tr>
+		<td><%= link_to genre.song_title, index_path, :id => song.id %></td>
+		<td><%= link_to genre.artist_name, :action => "display_artist", :name => song.artist_name %></td>
+		<td><%= link_to genre.genre_name, :action => "display_genre" , :name => song.genre_name%></td>
+		<td><%= button_to "EDIT", edit_path , :id => song.id %></td>
+		<td><%= button_to "DELETE", delete_path , :id => song.id %></td>
+	</tr>

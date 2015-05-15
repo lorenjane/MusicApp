@@ -1,0 +1,41 @@
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+	background-color: #E0E0E0;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+#header {
+	background:#202020;
+	padding:10px;
+	color: white;
+	border: 10px;
+	border-color: blue;
+}
+#content {
+	padding-bottom:100px;
+}
+#footer {
+	background:#202020;
+	width:100%;
+	height:50px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+#songplay {
+color: black;
+}
+#table1 {
+	table-layout: "fixed";
+	margin-bottom: 100px;
+}
+td
+{
+    max-width: 50px;
+	word-wrap:break-word;
+}

@@ -1,0 +1,62 @@
+<head>	
+	<link rel="stylesheet" href="/assets/style.css" />	
+</head>
+<body text = "white">
+	<div id="wrapper">	
+		<div id="header"> 
+			<h2 align= "center" >myMusic</h3>
+		</div>
+		<div id="content">
+		
+		
+			
+			<% if @song %>
+			<table id = "songplay" align = "center" width = "50%" border = "1" >
+			<tr>
+				<td><p align = "center">NOW PLAYING...<br><%= @song.song_title %> by <%= @song.artist_name %> (<%= @song.genre_name %>)</p></td>
+			</tr>
+			</table>
+			<% end %>
+			
+	
+		<br><br>
+			<table id = "table1" width = "60%" cellspacing = "0" align = "center" cellpadding = "3">
+				<col width = "20%">
+				<col width = "20%">
+				<col width = "20%">
+				<col width = "5%">
+				<col width = "5%">
+				<col width = "5%">
+				<tr>
+					<th><strong><%= link_to "SONG", :sort => :song_title %></strong></th>
+					<th><strong><%= link_to "ARTIST", :sort => :artist_name %></strong></th>
+					<th><strong><%= link_to "GENRE", :sort => :genre_name %></strong></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+				
+				<tr>
+					<%= render @songs %>
+				</tr>
+				<tr>
+					<td><br><br><%= button_to "Add Song", new_songinfo_path %></td>
+				</tr>
+				<tr>
+					<td><%= button_to "View All Songs", index_url %></td>
+				</tr>
+		</table>
+	</div>
+	<div id="footer" align = "center">
+	My Ruby on Rails Simple Application - fsdfsd
+	</div>
+</div>
+</body>
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<head>	
+<link rel="stylesheet" href="/assets/style.css" />	
+</head>
+<body>
+	<div id="wrapper">	
+		<div id="header"> 
+			<h2 align= "center" >myMusic</h3>
+		</div>
+		<div id="content"><br><br>
+			<h3 align = "center">Edit Song:</h3><br><br>
+				<table width = "25%" align = "center" cellspacing = "0" cellpadding = "5">
+				<%= form_for(:song, :url => {update_songinfo_path, :id => @song.id}) do |f| %>>
+				<col width="15%">
+				<col width="50%">
+					<tr>
+						<td>Song: </td>
+						<td align = "right"><%= f.text_field(:song_title) %><br></td>
+					</tr>
+					<tr>
+						<td>Artist: </td>
+						<td align = "right"><%= f.text_field(:artist_name) %><br></td>
+					</tr>
+					<tr>
+						<td>Genre: </td>
+						<td align = "right"><%= f.text_field(:genre_name) %><br></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td align = "right"><%= submit_tag("Edit Song") %><% end %></td>
+					</tr>  
+					<tr>
+						<td colspan = "2"><%= link_to "<< Go Back", :action => 'index' %></td>
+					</tr>
+					</table>
+		</div>
+		<div id="footer">
+		</div>
+	</div>
+</body>
+
+
+
+
+
+
+
+

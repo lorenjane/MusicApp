@@ -1,0 +1,8 @@
+<tr>
+	<td><%= link_to s.song_title, :action => "index", :id => s.id %></td>
+	<td><%= link_to s.artist_name, :action => "display_artist", :name => s.artist_name %></td>
+	<td><%= link_to s.genre_name, :action => "display_genre" , :name => s.genre_name%></td>
+	<td><%= button_to "EDIT", :action => 'editsong' , :id => s.id %></td>
+	<td><%= button_to "DELETE", :action => 'deletesong' , :id => s.id %></td>
+			
+</tr>
